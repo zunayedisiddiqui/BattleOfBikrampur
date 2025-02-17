@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        // Master Stack
         ZStack {
             
+            // Background Image
             Image("background-plain")
                 .resizable()
                 .ignoresSafeArea()
 
+            // VStack for all items inside screen
             VStack {
                 Spacer()
                 Image("logo")
@@ -31,6 +34,8 @@ struct ContentView: View {
                     
                 }
                 Spacer()
+                
+                // HStack for player/cpu scores
                 HStack{
                     Spacer()
                     VStack {
