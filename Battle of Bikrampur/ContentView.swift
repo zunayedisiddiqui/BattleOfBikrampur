@@ -18,7 +18,6 @@ struct ContentView: View {
     var body: some View {
         // Master stack
         ZStack {
-            
             // Background image
             Image("background-wood-grain")
                 .resizable()
@@ -80,11 +79,11 @@ struct ContentView: View {
     
     func dealButtonAction(){
         // Randomize the player card
-        var playerCardVal = Int.random(in: 2...14)
+        let playerCardVal = Int.random(in: 2...14)
         playerCard = "card" + String(playerCardVal)
         
         // Randomize the cpu card
-        var cpuCardVal = Int.random(in: 2...14)
+        let cpuCardVal = Int.random(in: 2...14)
         cpuCard = "card" + String(cpuCardVal)
         
         // Update scores
