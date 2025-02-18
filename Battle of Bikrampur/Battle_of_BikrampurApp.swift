@@ -11,7 +11,7 @@ import SwiftUI
 struct Battle_of_BikrampurApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandingScreenView()
         }
     }
 }
