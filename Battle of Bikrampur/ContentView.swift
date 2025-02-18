@@ -18,7 +18,6 @@ struct ContentView: View {
     var body: some View {
         // Master stack
         ZStack {
-            
             // Background image
             Image("background-wood-grain")
                 .resizable()
