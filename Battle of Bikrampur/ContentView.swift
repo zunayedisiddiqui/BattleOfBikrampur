@@ -2,18 +2,24 @@
 //  ContentView.swift
 //  Battle of Bikrampur
 //
+//  Main UI View of game screen
+//
 //  Created by Zunayed Siddiqui on 2/14/25.
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     
-    @State var playerCard = "card13"
-    @State var cpuCard = "card5"
+    @State var player1Card = "card13"
+    @State var player2Card = "card5"
     
-    @State var playerScore = 0;
-    @State var cpuScore = 0;
+    @State var player1Score = 0;
+    @State var player2Score = 0;
+    
+    @State private var showAlert = false
+    @State private var winnerMessage = ""
     
     var body: some View {
         // Master stack
@@ -36,9 +42,9 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image(playerCard)
+                    Image(player1Card)
                     Spacer()
-                    Image(cpuCard)
+                    Image(player2Card)
                     Spacer()
                 }
                 Spacer()
@@ -47,25 +53,24 @@ struct ContentView: View {
                 } label: {
                     Image("button")
                 }
-
                 Spacer()
                 
-                // HStack for player/cpu scores
+                // HStack for players scores
                 HStack{
                     Spacer()
                     VStack {
-                        Text("Player")
+                        Text("Player 1")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text(String(playerScore))
+                        Text(String(player1Score))
                             .font(.largeTitle)
                     }
                     Spacer()
                     VStack {
-                        Text("CPU")
+                        Text("Player 2")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text(String(cpuScore))
+                        Text(String(player2Score))
                             .font(.largeTitle)
                     }
                     Spacer()
@@ -73,24 +78,49 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 Spacer()
             }
-            
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                    title: Text("Game Over"),
+                    message: Text(winnerMessage),
+                    primaryButton: .default(Text("New Game")) {
+                        // Reset scores
+                        player1Score = 0
+                        player2Score = 0
+                    },
+                    secondaryButton: .default(Text("Exit App")) {
+                        // Close the app
+                        exit(0)
+                    }
+                )
         }
     }
     
     func dealButtonAction(){
-        // Randomize the player card
-        let playerCardVal = Int.random(in: 2...14)
-        playerCard = "card" + String(playerCardVal)
+        // Trigger vibration
+        let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+        feedbackGenerator.prepare() // Prepares the feedback generator
+        feedbackGenerator.impactOccurred() // Triggers the vibration
         
-        // Randomize the cpu card
-        let cpuCardVal = Int.random(in: 2...14)
-        cpuCard = "card" + String(cpuCardVal)
+        // Randomize player 1  card
+        let player1CardVal = Int.random(in: 2...14)
+        player1Card = "card" + String(player1CardVal)
+        
+        // Randomize player 2  card
+        let player2CardVal = Int.random(in: 2...14)
+        player2Card = "card" + String(player2CardVal)
         
         // Update scores
-        if(playerCardVal > cpuCardVal) {
-            playerScore+=1
-        } else if (playerCardVal < cpuCardVal) {
-            cpuScore+=1
+        if(player1CardVal > player2CardVal) {
+            player1Score+=1
+        } else if (player1CardVal < player2CardVal) {
+            player2Score+=1
+        }
+        
+        // Check if winner
+        if(player1Score == 7 || player2Score == 7) {
+            winnerMessage = player1Score == 7 ? "Player 1 Wins!" : "Player 2 Wins!"
+            showAlert = true
         }
     }
 }
