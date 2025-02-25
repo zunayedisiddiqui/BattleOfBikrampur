@@ -31,7 +31,7 @@ struct GameSetupView: View {
                         .fontDesign(.monospaced)
                         .padding(.top, 50)
                     
-                    Text("Select Number of Points to Win")
+                    Text("Select # of Points to Win:")
                         .font(.title2)
                         .foregroundColor(.white)
                         .padding(.top, 20)
@@ -42,7 +42,7 @@ struct GameSetupView: View {
                             Button(action: {
                                 selectedRounds = rounds
                             }) {
-                                Text("\(rounds) Points")
+                                Text("\(rounds)")
                                     .font(.title2)
                                     .foregroundColor(.white)
                                     .frame(width: 200, height: 50)

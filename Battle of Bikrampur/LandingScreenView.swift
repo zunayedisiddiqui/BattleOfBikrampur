@@ -26,7 +26,7 @@ struct LandingScreenView: View {
                     
                     VStack {
                         // Title with animation
-                        Text("BATTLE OF BIKRAMPUR")
+                        Text("HIGH CARD DUEL")
                             .font(.title)
                             .fontWeight(.bold)
                             .padding(.top, 70.0)
