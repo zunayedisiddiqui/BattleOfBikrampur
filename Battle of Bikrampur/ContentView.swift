@@ -46,7 +46,7 @@ struct ContentView: View {
             // VStack for all items inside screen
             VStack {
                 Spacer()
-                Text("HIGH CARD DUEL")
+                Text("CARD DUEL")
                     .font(.title)
                     .fontWeight(.bold)
                     .fontDesign(.monospaced)
