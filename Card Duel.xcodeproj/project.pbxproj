@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		DF2634212D604ACC006D844B /* Battle of Bikrampur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle of Bikrampur.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2634212D604ACC006D844B /* Card Duel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Duel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		DF2634222D604ACC006D844B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF2634212D604ACC006D844B /* Battle of Bikrampur.app */,
+				DF2634212D604ACC006D844B /* Card Duel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DF2634202D604ACC006D844B /* Battle of Bikrampur */ = {
+		DF2634202D604ACC006D844B /* Card Duel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF26342F2D604ACE006D844B /* Build configuration list for PBXNativeTarget "Battle of Bikrampur" */;
+			buildConfigurationList = DF26342F2D604ACE006D844B /* Build configuration list for PBXNativeTarget "Card Duel" */;
 			buildPhases = (
 				DF26341D2D604ACC006D844B /* Sources */,
 				DF26341E2D604ACC006D844B /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				DF2634232D604ACC006D844B /* Battle of Bikrampur */,
 			);
-			name = "Battle of Bikrampur";
+			name = "Card Duel";
 			packageProductDependencies = (
 			);
 			productName = "Battle of Bikrampur";
-			productReference = DF2634212D604ACC006D844B /* Battle of Bikrampur.app */;
+			productReference = DF2634212D604ACC006D844B /* Card Duel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DF26341C2D604ACC006D844B /* Build configuration list for PBXProject "Battle of Bikrampur" */;
+			buildConfigurationList = DF26341C2D604ACC006D844B /* Build configuration list for PBXProject "Card Duel" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF2634202D604ACC006D844B /* Battle of Bikrampur */,
+				DF2634202D604ACC006D844B /* Card Duel */,
 			);
 		};
 /* End PBXProject section */
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF26341C2D604ACC006D844B /* Build configuration list for PBXProject "Battle of Bikrampur" */ = {
+		DF26341C2D604ACC006D844B /* Build configuration list for PBXProject "Card Duel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF26342D2D604ACE006D844B /* Debug */,
@@ -316,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF26342F2D604ACE006D844B /* Build configuration list for PBXNativeTarget "Battle of Bikrampur" */ = {
+		DF26342F2D604ACE006D844B /* Build configuration list for PBXNativeTarget "Card Duel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF2634302D604ACE006D844B /* Debug */,
